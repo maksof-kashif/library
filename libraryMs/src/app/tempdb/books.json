@@ -10,13 +10,31 @@
 			"id" : 2,
 			"name":"Maths",
 			"author":"Khursheed Alam",
-			"pages":"265",
+			"pages":"285",
 			"publishedOn":"6-25-2018"
 		},{	
 			"id" : 3,
 			"name":"Maths",
 			"author":"Khursheed Alam",
-			"pages":"265",
+			"pages":"351",
+			"publishedOn":"6-25-2018"
+		},{	
+			"id" : 4,
+			"name":"Maths",
+			"author":"Khursheed Alam",
+			"pages":"145",
+			"publishedOn":"6-25-2018"
+		},{	
+			"id" : 5,
+			"name":"Maths",
+			"author":"Khursheed Alam",
+			"pages":"245",
+			"publishedOn":"6-25-2018"
+		},{	
+			"id" : 6,
+			"name":"Maths",
+			"author":"Khursheed Alam",
+			"pages":"245",
 			"publishedOn":"6-25-2018"
 		}
 	]
