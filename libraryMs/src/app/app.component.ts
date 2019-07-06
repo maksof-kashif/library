@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {NotificationsService, SimpleNotificationsComponent} from 'angular2-notifications';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'libraryMs';
+  title = 'libraryMs'
+  constructor(private route:ActivatedRoute, private router: Router, public notificationService: NotificationsService) { }
+  public options = {
+		position: ["bottom", "left"],
+		showProgressBar: true,
+		pauseOnHover: true,
+		clickToClose: true,
+		clickIconToClose: true,
+		lastOnBottom: true,
+		timeOut: 3000,
+	}
 }
