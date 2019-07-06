@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NotificationsService } from 'angular2-notifications';
+import * as books from '../tempdb/books.json';
 
 @Component({
   selector: 'app-bookdetails',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookdetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public notificationService: NotificationsService) { }
 
   ngOnInit() {
+  	console.log(books);
   }
 
   backBtn(){
