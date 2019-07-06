@@ -12,4 +12,8 @@ export class BooklistComponent implements OnInit {
   ngOnInit() {
   }
 
+  backBtn(){
+  	window.history.back();
+  }
+
 }
