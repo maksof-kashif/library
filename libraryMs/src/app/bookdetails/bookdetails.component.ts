@@ -12,4 +12,8 @@ export class BookdetailsComponent implements OnInit {
   ngOnInit() {
   }
 
+  backBtn(){
+  	window.history.back();
+  }
+
 }
