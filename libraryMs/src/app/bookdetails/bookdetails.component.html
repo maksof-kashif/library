@@ -1,1 +1,43 @@
 <button (click)="backBtn()">Back</button>
+	<h2>Books Details</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Pages</th>
+        <th>Publish on</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = 'let row of tabledata; let i = index'>
+        <td><span *ngIf="canEdit != i">{{row.name}}</span> <input *ngIf="canEdit == i" type="text" name="name" [(ngModel)]="row.name"></td>
+        <td><span *ngIf="canEdit != i">{{row.author}}</span> <input *ngIf="canEdit == i" type="text" name="name" [(ngModel)]="row.author"></td>
+        <td><span *ngIf="canEdit != i">{{row.pages}}</span> <input *ngIf="canEdit == i" type="text" name="name" [(ngModel)]="row.pages"></td>
+        <td><span *ngIf="canEdit != i">{{row.publishedOn}}</span> <input *ngIf="canEdit == i" type="text" name="name" [(ngModel)]="row.publishedOn"></td>
+        <td><button class="btn btn primary" (click)="EditBookDetails(i)">Edit</button></td>
+        <td *ngIf="editField && canEdit == i"><button class="btn btn primary" (click)="SaveEditBookDetails(row)">Save</button></td>
+        <td *ngIf="editField && canEdit == i"><button class="btn btn primary" (click)="CancelEditBookDetails(row)">Cancel</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="col-md-8">
+	<ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+	    <li [ngClass]="{disabled:pager.currentPage === 1}">
+	        <a class="page-link" (click)="setPage(1)">First</a>
+	    </li>
+	    <li [ngClass]="{disabled:pager.currentPage === 1}">
+	        <a class="page-link" (click)="setPage(pager.currentPage - 1)">Previous</a>
+	    </li>
+	    <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+	        <a class="page-link" (click)="setPage(page)">{{page}}</a>
+	    </li>
+	    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+	        <a class="page-link" (click)="setPage(pager.currentPage + 1)">Next</a>
+	    </li>
+	    <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+	        <a class="page-link" (click)="setPage(pager.totalPages)">Last</a>
+	    </li>
+	</ul>
+  </div>
