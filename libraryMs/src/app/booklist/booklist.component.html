@@ -5,18 +5,14 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th>Naem</th>
+        <th>Name</th>
         <th>Author</th>
-        <th>Pages</th>
-        <th>Publish on</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor = 'let row of tabledata'>
         <td>{{row.name}}</td>
         <td>{{row.author}}</td>
-        <td>{{row.pages}}</td>
-        <td>{{row.publishedOn}}</td>
       </tr>
     </tbody>
   </table>
