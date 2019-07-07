@@ -32,7 +32,7 @@ export class BooklistComponent implements OnInit {
   }
 
   getBookData(){
-  	this.book = books.default.booksDetails;
+  	this.book = (books as any).default.booksDetails;
   	this.totalItems = books.default.booksDetails.length;
   	if (this.start == true)this.setPage(1);
   }
