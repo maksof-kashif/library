@@ -44,7 +44,6 @@ export class BooklistComponent implements OnInit {
 	if(page < 1) page = 1;
     this.offset = (page - 1) * this.limit;
     this.tabledata = this.setDataForPage();
-    console.log(this.tabledata);
 	}
 
 	setDataForPage(){

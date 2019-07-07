@@ -8,32 +8,32 @@
 			"publishedOn":"6-25-2018"
 		},{	
 			"id" : 2,
-			"name":"Maths",
-			"author":"Khursheed Alam",
+			"name":"Chemistry",
+			"author":"Alam",
 			"pages":"285",
 			"publishedOn":"6-25-2018"
 		},{	
 			"id" : 3,
-			"name":"Maths",
-			"author":"Khursheed Alam",
+			"name":"English",
+			"author":"Jhone",
 			"pages":"351",
 			"publishedOn":"6-25-2018"
 		},{	
 			"id" : 4,
-			"name":"Maths",
-			"author":"Khursheed Alam",
+			"name":"Electronics",
+			"author":"Floyed",
 			"pages":"145",
 			"publishedOn":"6-25-2018"
 		},{	
 			"id" : 5,
-			"name":"Maths",
-			"author":"Khursheed Alam",
+			"name":"Computer",
+			"author":"Comer",
 			"pages":"245",
 			"publishedOn":"6-25-2018"
 		},{	
 			"id" : 6,
-			"name":"Maths",
-			"author":"Khursheed Alam",
+			"name":"Network",
+			"author":"Micke",
 			"pages":"245",
 			"publishedOn":"6-25-2018"
 		}
