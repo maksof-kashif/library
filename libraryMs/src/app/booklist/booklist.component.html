@@ -1,6 +1,27 @@
 <button (click)="backBtn()">Back</button>
 
-<div class="col-md-8">
+<div class="container">
+  <h2>Striped Rows</h2>
+  <p>The .table-striped class adds zebra-stripes to a table:</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Naem</th>
+        <th>Author</th>
+        <th>Pages</th>
+        <th>Publish on</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = 'let row of tabledata'>
+        <td>{{row.name}}</td>
+        <td>{{row.author}}</td>
+        <td>{{row.pages}}</td>
+        <td>{{row.publishedOn}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="col-md-8">
 	<ul *ngIf="pager.pages && pager.pages.length" class="pagination">
 	    <li [ngClass]="{disabled:pager.currentPage === 1}">
 	        <a class="page-link" (click)="setPage(1)">First</a>
@@ -18,4 +39,5 @@
 	        <a class="page-link" (click)="setPage(pager.totalPages)">Last</a>
 	    </li>
 	</ul>
+  </div>
 </div>
