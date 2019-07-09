@@ -1,4 +1,5 @@
-<button (click)="backBtn()">Back</button>
+<div class="container pt-5">
+	<button (click)="backBtn()" class="btn btn-sm btn-info mb-4">Back</button>
 	<h2>Books Details</h2>
   <table class="table table-striped">
     <thead>
@@ -16,9 +17,7 @@
         <td><span *ngIf="canEdit != i">{{row.author}}</span> <input *ngIf="canEdit == i" type="text" name="name" [(ngModel)]="row.author"></td>
         <td><span *ngIf="canEdit != i">{{row.pages}}</span> <input *ngIf="canEdit == i" type="text" name="name" [(ngModel)]="row.pages"></td>
         <td><span *ngIf="canEdit != i">{{row.publishedOn}}</span> <input *ngIf="canEdit == i" type="text" name="name" [(ngModel)]="row.publishedOn"></td>
-        <td><button class="btn btn primary" (click)="EditBookDetails(i)">Edit</button></td>
-        <td *ngIf="editField && canEdit == i"><button class="btn btn primary" (click)="SaveEditBookDetails(row)">Save</button></td>
-        <td *ngIf="editField && canEdit == i"><button class="btn btn primary" (click)="CancelEditBookDetails(row)">Cancel</button></td>
+        <td><button class="btn btn-primary" (click)="EditBookDetails(i)">Edit</button> <button *ngIf="editField && canEdit == i" class="btn btn-success ml-2" (click)="SaveEditBookDetails(row)">Save</button> <button *ngIf="editField && canEdit == i" class="btn btn-warning ml-2" (click)="CancelEditBookDetails(row)">Cancel</button></td>
       </tr>
     </tbody>
   </table>
@@ -41,3 +40,4 @@
 	    </li>
 	</ul>
   </div>
+</div>  

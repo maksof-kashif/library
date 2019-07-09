@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="booksd_bModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="book">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="numberOfPages" Type="int" Nullable="false" />
+    <Property Name="dateOfPublication" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="createDate" Type="varchar" MaxLength="50" />
+    <Property Name="updateDate" Type="varchar" MaxLength="50" />
+    <Property Name="authors" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="isDeleted" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="booksd_bModelStoreContainer">
+    <EntitySet Name="book" EntityType="Self.book" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
