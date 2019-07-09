@@ -17,6 +17,6 @@ export class AppComponent {
 		clickToClose: true,
 		clickIconToClose: true,
 		lastOnBottom: true,
-		timeOut: 3000,
+		timeOut: 5000,
 	}
 }
