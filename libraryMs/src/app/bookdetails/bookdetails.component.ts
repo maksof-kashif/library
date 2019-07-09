@@ -87,7 +87,9 @@ export class BookdetailsComponent implements OnInit {
   }
 
   SaveEditBookDetails(row){
+    this.book.sort(this.sortArr);
     localStorage.setItem('bookData',JSON.stringify(this.book));
+    this.notificationService.info("Info! Field has been edit successfully");
     this.editField = false;
     this.canEdit = row+1;
   }

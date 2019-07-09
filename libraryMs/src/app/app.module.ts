@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SimpleNotificationsModule } from 'angular2-notifications';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +20,7 @@ import { BookdetailsComponent } from './bookdetails/bookdetails.component';
   imports: [
     BrowserModule,
     FormsModule,
+    BrowserAnimationsModule,
     SimpleNotificationsModule.forRoot(),
     AppRoutingModule
   ],
